@@ -1,6 +1,6 @@
 """This is the code for EX01 relational operator portion."""
 
-__author__ = 730318786
+__author__ = "730318786"
 
 left_hand_side_str: str = input("Left-hand side: ")
 right_hand_side_str: str = input("Right-hand side: ")

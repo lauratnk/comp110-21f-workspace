@@ -1,6 +1,6 @@
 """This is the code for EX01 hype machine portion."""
 
-__author__ = 730318786
+__author__ = "730318786"
 
 name: str = input("What is your name? ")
 print("You are SUCH a girlboss, " + name)
