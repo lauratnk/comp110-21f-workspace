@@ -3,14 +3,14 @@
 __author__ = "730318786"
 
 i: int = 0
+true_value: int = 0
 enter_letter: str = input("What letter do you want to search for? ")
 enter_word: str = str(input("Enter a word: "))
 maximum: int = len(enter_word)
 
-""" uhhhhhh v 4 """
-if i >= maximum:
-    i = 0
-else:
-    while enter_word[i] != enter_letter:
-        i = i + 1
-print(str(i + 1))
+while i < maximum:
+    if enter_letter == enter_word[i]:
+        true_value = i + 1
+    i = i + 1
+
+print("Count: " + str(true_value))

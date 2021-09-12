@@ -9,6 +9,7 @@ __author__ = "730318786"
 #
 # For example, consider the function call expression: randint(1, 100)
 # It will evaluate to an int value >= 1 and <= 100. 
+
 from random import randint
 
 fortune_number: int = randint(1, 5)
