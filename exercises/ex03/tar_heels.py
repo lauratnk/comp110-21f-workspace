@@ -16,8 +16,11 @@ def tarheels(a: int) -> str:
     else:
         return "CAROLINA"
 
+
 enter_number: int = int(input("Enter an int: "))
 
+
 final: str = tarheels(enter_number)
+
 
 print(final)
