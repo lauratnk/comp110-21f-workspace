@@ -19,7 +19,13 @@ def only_evens(ls1: list[int]) -> list[int]:
 def sub(ls1: list[int], start: int, end: int) -> list[int]:
     """Returns a the numbers in a list within the given index."""
     ls2: list[int] = []
-    # UHHHHHHHHH
+    i: int = start
+    if start == len(ls1):
+        return ls2
+    while i < len(ls1) and i < end:
+        if i >= 0:
+            ls2.append(ls1[i])
+        i += 1
     return ls2
 
 
