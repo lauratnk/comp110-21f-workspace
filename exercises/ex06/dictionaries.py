@@ -8,8 +8,7 @@ def invert(dict1: dict[str, str]) -> dict[str, str]:
     """Inverts the key and value types in a given dicitonary."""
     dict2 = dict()
     
-    for x in dict1:
-        """Iterates through each key in dict1."""
+    for x in dict1:  # Iterates through each key in dict1.
         if dict1[x] in dict2:
             raise KeyError("Input dictionary contains multiples of the same value.")
         else:
@@ -48,15 +47,12 @@ def favorite_color(dict1: dict[str, str]) -> str:
 
 
 def count(ls1: list[str]) -> dict[str, int]:
-    """Given a list, this function will produce a dict where each key is a unique value in the given list and each value associated is the count of the number of times that value appeared in the input list."""
+    """Returns a new dict whose keys are units in ls1 and values are number of times listed in ls1."""
     dict1 = dict()
-    for x in ls1:
-        """Iterates through each value in the given list."""
-        if x in dict1:
-            """If unique value is already in dict, increase dict value by one."""
+    for x in ls1:  # Iterates through each value in the given list.
+        if x in dict1:  # If unique value is already in dict, increase dict value by one.
             dict1[x] += 1
-        else:
-            """If unique value is not already in dict, set dict value to one."""
+        else:  # If unique value is not already in dict, set dict value to one.
             dict1[x] = 1
 
     return dict1
