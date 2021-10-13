@@ -37,14 +37,12 @@ def favorite_color(dict1: dict[str, str]) -> str:
     for x in dict2:
         finalvals.append(dict2[x])
 
-    c: str = "Error"
     i: int = 0
+    c: str = "You did something wrong bby."
 
-    while i < len(finalvals):
+    for i in finalvals:
         if finalvals[i] == max(finalvals):
-            z: int = i
-            return finalkeys[z]
-        i += 1
+            return finalkeys[i]
 
     return c
 
