@@ -21,21 +21,18 @@ def invert(dict1: dict[str, str]) -> dict[str, str]:
 def favorite_color(dict1: dict[str, str]) -> str:
     """Returns the value that appears the most frequently."""
     dict2 = dict()
-
-# For all values in dict1, add value name to dict2, set value name = 0.
-    for x in dict1:
+    
+    for x in dict1:  # For all values in dict1, add value name to dict2, set value name = 0.
         dict2[dict1[x]] = 0
 
-# Iterate through all key[value] in dict1. If key of dict2 in dict1 increase the value of key in dict2 by 1.
-    for x in dict1:
+    for x in dict1:  # Iterate through all key[value] in dict1. If key of dict2 in dict1 increase the value of key in dict2 by 1.
         if dict1[x] in dict2:
             dict2[dict1[x]] += 1
 
     finalkeys: list = []
     finalvals: list = []
-
-# Separates dict2 into a list of final values and a list of final keys. 
-    for x in dict2:
+ 
+    for x in dict2:  # Separates dict2 into a list of final values and a list of final keys.
         finalkeys.append(x)
     for x in dict2:
         finalvals.append(dict2[x])

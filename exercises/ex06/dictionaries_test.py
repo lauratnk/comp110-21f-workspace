@@ -1,7 +1,7 @@
 """Unit tests for dictionary functions."""
 
-# TODO: Uncomment the below line when ready to write unit tests
 from exercises.ex06.dictionaries import invert, favorite_color, count
+
 
 __author__ = "730318786"
 
@@ -20,8 +20,8 @@ def test_invert2() -> None:
 
 def test_invert3() -> None:
     """Test invert."""
-    a: dict[str, str] = {'kris': 'jordan', 'michael': 'jordan'}
-    assert invert(a) == KeyError
+    a: dict[str, str] = {'kris': 'jordan', 'michael': 'keaton'}
+    assert invert(a) == {'jordan': 'kris', 'keaton': 'michael'}
 
 
 def test_favorite_color1() -> None:
