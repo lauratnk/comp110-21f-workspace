@@ -45,19 +45,46 @@ def columnar(row_table: list[dict[str, str]]) -> dict[str, list[str]]:
 
 def head(input_table: dict[str, list[str]], n: int) -> dict[str, list[str]]:
     """Function 1.0."""
-    # establish empty dictionary
     dict1: dict = {}
-    
-    # create a dictionary with the column names [str] attached to the first 5 rows of column values 
-    
-    # loop through every column. copy column name into dict1.
     for key in input_table:
-        dict1[key] = []
-        # for every copied column. copy the first 5 vals. 
-        
-        for key in range(n):
-            dict1[key].append(input_table)
-    
-    print(dict1)
+        i = 0
+        ls1 = []
+        while i < n:
+            ls1.append(input_table[key][i])
+            i += 1
+        dict1[key] = ls1
+    return dict1
+
+
+def select(input_table: dict[str, list[str]], row_names: list[str]) -> dict[str, list[str]]:
+    """Create a new dict from input dict with a select number of columns."""
+    dict1 = {}
+
+    for key in input_table:
+        if key in row_names:
+            dict1[key] = input_table[key] 
+
+    return dict1
+
+
+def concat(input_table1: dict[str, list[str]], input_table2: dict[str, list[str]]) -> dict[str, list[str]]:
+    """Produce a new column-based table with two column based tables combined."""
+    dict1 = {}
+    for key in input_table1: 
+        dict1[key] = input_table1[key]
+    for key in input_table2: 
+        dict1[key] = input_table2[key]
+
+    return dict1
+
+
+def count(input_list: list[str]) -> dict[str, int]:
+    """Creates a dictionary of the counts of each item in the input list."""
+    dict1 = {}
+    for key in input_list:
+        if key in dict1:
+            dict1[key] += 1
+        else:
+            dict1[key] = 1
 
     return dict1
