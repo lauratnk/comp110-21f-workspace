@@ -1,7 +1,4 @@
-"""Utility functions."""
-
-__author__ = "730318786"
-
+"""Imported functions for PJ01."""
 
 from csv import DictReader
 
@@ -73,33 +70,11 @@ def select(input_table: dict[str, list[str]], row_names: list[str]) -> dict[str,
             dict1[key] = input_table[key] 
 
     return dict1
-
-
-def concat(input_table1: dict[str, list[str]], input_table2: dict[str, list[str]]) -> dict[str, list[str]]:
-    """Produce a new column-based table with two column based tables combined."""
-    # concat works with duplicate keys between a and b
-    dict1 = {}
-
-    for key in input_table1: 
-        dict1[key] = input_table1[key]
-    for key in input_table2:
-        ls1 = input_table1[key]
-        ls2 = input_table2[key]
-        if key in dict1:
-            i = 0
-            while i < len(ls2):
-                ls1.append(ls2[i])
-            dict1[key] = ls1
         
-        else:
-            dict1[key] = input_table2[key]
-    
-    return dict1
 
-
-def count(input_list: list[str]) -> dict[str, int]:
+def count1(input_list: list[str]) -> dict[str, int]:
     """Creates a dictionary of the counts of each item in the input list."""
-    dict1: dict[str, int] = {}
+    dict1: dict[str, int] = {'1': 0, '2': 0, '3': 0, '4': 0, '5': 0, '6': 0, '7': 0}
     for key in input_list:
         if key in dict1:
             dict1[key] += 1
@@ -107,3 +82,14 @@ def count(input_list: list[str]) -> dict[str, int]:
             dict1[key] = 1
 
     return dict1
+        
+
+def lists(input_table: dict[str, list[str]], input1: str, input2: str, input3: str) -> list[str]:
+    """Creates a list."""
+    list1 = []
+    i = 0
+    while i < len(input_table[input1]):
+        if input_table[input1][i] == input2:
+            list1.append(input_table[input3][i])
+        i += 1
+    return list1
